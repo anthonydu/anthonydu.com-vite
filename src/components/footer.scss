@@ -1,0 +1,30 @@
+.Footer {
+  a {
+    color: white;
+    font-family: sans-serif;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+  }
+  a:hover {
+    text-decoration-style: solid;
+  }
+  #tooltip {
+    font-size: x-small;
+    font-family: sans-serif;
+    line-height: 1.5;
+    color: white;
+    background-color: #242424;
+    border: 1px solid #3d3d3d;
+    padding: 0 5px;
+    position: fixed;
+    z-index: 9999;
+  }
+  a:not(:hover) + #tooltip {
+    opacity: 0;
+    transition: opacity 1s;
+    transition-delay: 0.2s;
+  }
+  a:hover + #tooltip {
+    opacity: 1;
+  }
+}

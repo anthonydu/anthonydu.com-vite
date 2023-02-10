@@ -1,0 +1,17 @@
+$nav-height: 75px;
+$nav-font-size: 20px;
+$tablet-breakpoint: 1000px;
+$mobile-breakpoint: 600px;
+$height-breakpoint: 650px;
+$max-width: 550px;
+$min-width: 300px;
+
+:export {
+  navHeight: $nav-height;
+  navFontSize: $nav-font-size;
+  tabletBreakpoint: $tablet-breakpoint;
+  mobileBreakpoint: $mobile-breakpoint;
+  heightBreakpoint: $height-breakpoint;
+  minWidth: $min-width;
+  maxWidth: $max-width;
+}

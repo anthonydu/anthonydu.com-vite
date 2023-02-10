@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    	<title>Page Not Found | Anthony Du</title>
+
+    	<link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png"/>
+        <link rel="icon" type="image/png" sizes="192x192" href="%PUBLIC_URL%/android-chrome-192x192.png"/>
+        <link rel="icon" type="image/png" sizes="512x512" href="%PUBLIC_URL%/android-chrome-512x512.png"/>
+        <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon.png"/>
+    	
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    	<style media="screen" type="text/css">
+            * {
+                margin: 0;
+            }
+            html, body {
+                background-color: black;
+                height: 100%;
+                color: white;
+                font-family: "Space Mono", monospace;
+            }
+            .main {
+                display: flex; 
+                flex-direction: column; 
+                align-items: center; 
+                justify-content: center;
+                height: 100%;
+                width: 100%;
+            }
+            h1, input {
+                font-size: 48px;
+                line-height: 1.2;
+            }
+            pre {
+                display: inline-block;
+                font-family: inherit;
+                width: 3ch;
+            }
+            span {
+                display: inline-block;
+                width: 0;
+                overflow: visible;
+                position: relative;
+                left: -3ch;
+            }
+            input {
+                background-color: transparent;
+                color: white;
+                font-family: "Space Mono", monospace;
+                border: none;
+                caret-color: transparent;
+                outline: none;
+                width: 0;
+                height: 0;
+            }
+            a {
+                color: white;
+                text-decoration: none;
+                border-bottom: 1px solid white;
+                margin-bottom: 5px;
+            }
+            p {
+                display: none;
+            }
+    	</style>
+    </head>
+    <body>
+        <div class="main">
+            <input type="text" autocomplete="off"/>
+            <h1><pre></pre><span>_</span></h1>
+            <script>
+                cursorVisibility = true;
+        	    setTimeout(function() {
+                    $("input").val("4");
+                    $("input").change();
+                }, 1000);
+                setTimeout(function() {
+                    $("input").val("40");
+                    $("input").change();
+                }, 2000);
+                setTimeout(function() {
+                    $("input").val("404");
+                    $("input").change();
+                    $("p").slideDown(2000);
+                    $("input").focus();
+                }, 3000);
+                setInterval(function() {
+                    if (cursorVisibility) {
+        	            $("span").css("visibility", "hidden"); 
+                        cursorVisibility = false;
+        	        } else {
+        	            $("span").css("visibility", "visible");
+                        cursorVisibility = true;
+        	        }
+                }, 500);
+
+                $("input").focus(function() {
+                    const valength = $(this).val().length;
+                    $(this)[0].setSelectionRange(valength, valength);
+                });
+
+                $("input").on("input change focus keydown keyup", function() {
+                    $("pre").text($("input").val());
+                    $("span").css("left", ($(this)[0].selectionStart - 3) + "ch");
+                    const selectionSize = $(this)[0].selectionEnd - $(this)[0].selectionStart;
+                    $("span").text("_".repeat(selectionSize === 0 ? 1 : selectionSize));
+                });
+
+                $("input").blur(function() {
+                    setTimeout(function() {
+                        $("input").focus();
+                    }, 0);
+                });
+            </script>
+            <h2>Page not found</h2>
+            <a href="/">Continue to main site</a>
+            <p><small>(Hint: type something)</small></p>
+        </div>
+    </body>
+</html>

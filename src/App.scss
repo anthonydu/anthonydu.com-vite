@@ -1,0 +1,39 @@
+@use "src/_variables.module" as *;
+
+.App {
+  color: white;
+  font-family: "Iceland";
+  .NavBar, .Main, .Footer {
+    min-width: $min-width;
+  }
+}
+
+.NavBar {
+  position: fixed;
+  top: 0;
+  height: $nav-height;
+  width: 100%;
+  background-color: black;
+  z-index: 999;
+  border-bottom: 2px solid white;
+}
+
+.Main {
+  height: calc(100vh - #{$nav-height});
+  margin-top: $nav-height;
+  overflow-y: visible;
+}
+
+.Main > * {
+  scroll-margin-top: $nav-height;
+}
+
+.Footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  line-height: 1.2;
+  background-color: black;
+  font-size: small;
+}

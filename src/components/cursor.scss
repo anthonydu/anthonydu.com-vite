@@ -1,0 +1,18 @@
+.Cursor {
+  background-color: white;
+  mix-blend-mode: difference;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  position: fixed;
+  z-index: 999;
+  pointer-events: none;
+
+  @media (hover: none) {
+    visibility: hidden;
+  }
+}
+
+.App * {
+  cursor: none !important;
+}

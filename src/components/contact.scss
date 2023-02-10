@@ -1,0 +1,30 @@
+@use "../_variables.module" as *;
+
+.Contact {
+  #contact-content {
+    width: $max-width;
+  }
+  .form-control, .form-control:focus, 
+  .btn, .btn:disabled, .btn:hover, .btn:focus {
+    color: white;
+    font-family: "Iceland";
+    background-color: black;
+    border: 2px solid white;
+    transition: opacity 0.5s, box-shadow 0.5s, scale 0.5s;
+  }
+  .FloatingLabel {
+    transition: scale 0.5s;
+  }
+  .FloatingLabel:has(.form-control:focus), .btn:hover, .btn:focus {
+    box-shadow: 0 0 20px 2px rgba(112,20,210);
+    scale: 1.02;
+  }
+  .grecaptcha-badge { 
+    visibility: hidden; 
+  }
+  @media only screen and (max-width: $mobile-breakpoint) {
+    #contact-content {
+      width: $min-width;
+    }
+  }
+}

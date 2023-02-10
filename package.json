@@ -1,0 +1,33 @@
+{
+  "name": "anthonydu.com-vite",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "sync": "npm run build && browser-sync start --server 'dist'"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^3.10.0",
+    "@types/matter-js": "^0.18.2",
+    "@types/node": "^18.13.0",
+    "@types/react-google-recaptcha": "^2.1.5",
+    "framer-motion": "^9.0.2",
+    "matter-attractors": "^0.1.6",
+    "matter-js": "^0.18.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-google-recaptcha": "^2.1.0",
+    "react-p5": "^1.3.33",
+    "sass": "^1.58.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react": "^3.1.0",
+    "typescript": "^4.9.3",
+    "vite": "^4.1.1"
+  }
+}
