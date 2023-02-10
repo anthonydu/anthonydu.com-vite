@@ -1,6 +1,13 @@
 # www.anthonydu.com
 
- > ### [R.I.P. Atom](https://github.blog/2022-06-08-sunsetting-atom/) <sub>2014 - 2022</sub>
+### History of this Website
+
+- Started on July 8 2021, written in vanilla HTML/CSS/JS
+- Updated to React in December 2022, bootstrapped with Create React App
+- Switched development environment to Vite in Feburary 2023
+
+### [R.I.P. Atom](https://github.blog/2022-06-08-sunsetting-atom/) <sub>2014 - 2022</sub>
+
  > I wrote the first lines of anthonydu.com in Atom.
  > 
  > It's a sad day for the GitHub community.
