@@ -12,8 +12,8 @@ const Footer = () => {
 
   return (
     <footer className="Footer">
-      <a href="https://github.com/anthonydu/anthonydu.com-react" onMouseOver={handleMouseOver}>Est.&nbsp;July&nbsp;2021&nbsp;&middot;&nbsp;&copy;&nbsp;2023&nbsp;Anthony&nbsp;Du&nbsp;♥️ Scaffolded&nbsp;with&nbsp;Vite&nbsp;⚡</a>
-      <div id="tooltip" style={{ top: `${top}px`, left: `${left}px` }}>View&nbsp;GitHub&nbsp;Repository</div>
+      <a href="https://github.com/anthonydu/anthonydu.com-react" onMouseOver={handleMouseOver}>&#xA9;&nbsp;2023&nbsp;Anthony&nbsp;Du&nbsp;&#x2665;&#xFE0E;&nbsp;Scaffolded&nbsp;with&nbsp;Vite&nbsp;&#x26A1;&#xFE0E;</a>
+      <div id="tooltip" style={{ top: `${top}px`, left: `${left}px` }}>View&nbsp;Source&nbsp;Code&nbsp;on&nbsp;GitHub</div>
     </footer>
   );
 }
