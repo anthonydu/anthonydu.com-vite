@@ -7,6 +7,6 @@ declare namespace Matter {
         mousedown: (this: HTMLElement, ev: TouchEvent | MouseEvent) => void;
         mouseup: (this: HTMLElement, ev: TouchEvent | MouseEvent) => void;
         mousemove: (this: HTMLElement, ev: TouchEvent | MouseEvent) => void;
-        mousewheel: (this: HTMLElement, ev: MouseWheelEvent) => void
+        mousewheel: (this: HTMLElement, ev: MouseWheelEvent) => void;
     }
 }
