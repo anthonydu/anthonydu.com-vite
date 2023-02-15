@@ -39,7 +39,7 @@ const About = () => {
               <img src={ubcpsych} alt="UBCPsych Logo"/>
               <h5 className="mb-0">UBC Dept.<br/>of Psychology</h5>
             </a>
-            <p><small>Jr. IT Support Analyst | Sep '22 - Present</small></p>
+            <p><small>Jr. IT Support Analyst | Sep '22 - Feb '23</small></p>
           </Col>
           <Col span="m-6">
             <a href="https://www.linkedin.com/company/ncsu-libraries/">
