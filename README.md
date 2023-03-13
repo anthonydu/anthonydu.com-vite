@@ -4,7 +4,7 @@
 
 - Started on July 8 2021, written in vanilla HTML/CSS/JS
 - Updated to React in December 2022, bootstrapped with Create React App
-- Switched development environment to Vite in Feburary 2023
+- Updated to Typescript and switched development environment to Vite in Feburary 2023
 
 ### [R.I.P. Atom](https://github.blog/2022-06-08-sunsetting-atom/) <sub>2014 - 2022</sub>
 
